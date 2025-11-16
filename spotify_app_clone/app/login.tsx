@@ -12,6 +12,8 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
+import { useRouter } from 'expo-router';
+
 
 const spotifylogo1 = require('../assets/images/Spotify_Full_Logo_RGB_Green.png');
 
@@ -19,6 +21,7 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [remember, setRemember] = useState(true);
+  const router = useRouter();
 
   function handleLogin() {
     // Placeholder: handle auth here (no navigation)
@@ -33,7 +36,7 @@ export default function Login() {
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         style={styles.flex}
       >
-        <TouchableOpacity style={styles.back} onPress={() => {}}>
+        <TouchableOpacity style={styles.back} onPress={() => router.push('/')}>
           <Text style={styles.backText}>‹</Text>
         </TouchableOpacity>
 

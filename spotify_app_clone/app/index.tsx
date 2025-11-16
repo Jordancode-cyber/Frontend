@@ -11,7 +11,7 @@ export default function Index() {
       <StatusBar style="light" hidden={true} />
       <Image source={spotifylogo} style={styles.logo} />
        <Link href="/login" style={styles.button}>
-        Login
+        Welcome
       </Link>
     </View>
   );
